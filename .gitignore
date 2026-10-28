@@ -1,0 +1,22 @@
+# Node & Dependencies
+node_modules/
+dist/
+build/
+.next/
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Office temporary files
+~$*.docx
