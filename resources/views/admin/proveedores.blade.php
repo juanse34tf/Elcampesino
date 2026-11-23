@@ -16,16 +16,18 @@
 
     </div>
 
-    <button
-        class="bg-[#0F3D2F]
-               hover:bg-green-800
-               text-white
-               px-6
-               py-3
-               rounded-xl"
-    >
-        + Nuevo Proveedor
-    </button>
+    <a
+    href="/admin/proveedores/nuevo"
+    class="bg-[#0F3D2F]
+           hover:bg-green-800
+           text-white
+           px-6
+           py-3
+           rounded-xl
+           inline-block">
+    + Nuevo Proveedor
+</a>
+    
 
 </div>
 

@@ -10,5 +10,6 @@ Route::view('/admin/movimientos', 'admin.movimientos');
 Route::view('/admin/alertas', 'admin.alertas');
 Route::view('/admin/proveedores', 'admin.proveedores');
 Route::view('/admin/usuarios', 'admin.usuarios');
+Route::view('/admin/proveedores/nuevo','admin.nuevo-proveedor');
 
 Route::view('/vendedor/dashboard', 'vendedor.dashboard');
