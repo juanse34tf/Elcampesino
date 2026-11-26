@@ -49,28 +49,8 @@ class User extends Authenticatable
         return $this->rol === 'EMPLEADO';
     }
 
-    public function isRepartidor(): bool
-    {
-        return $this->rol === 'REPARTIDOR';
-    }
-
-    public function isCliente(): bool
-    {
-        return $this->rol === 'CLIENTE';
-    }
-
     public function movimientos(): HasMany
     {
         return $this->hasMany(MovimientoKardex::class, 'user_id');
-    }
-
-    public function pedidosCliente(): HasMany
-    {
-        return $this->hasMany(Pedido::class, 'cliente_id');
-    }
-
-    public function pedidosRepartidor(): HasMany
-    {
-        return $this->hasMany(Pedido::class, 'repartidor_id');
     }
 }

@@ -40,7 +40,7 @@ class UsuarioController extends Controller
             'name' => ['required', 'string', 'max:100'],
             'email' => ['required', 'email', 'max:120', 'unique:users,email'],
             'password' => ['required', 'string', 'min:6'],
-            'rol' => ['required', Rule::in(['ADMIN', 'EMPLEADO', 'REPARTIDOR', 'CLIENTE'])],
+            'rol' => ['required', Rule::in(['ADMIN', 'EMPLEADO'])],
             'telefono' => ['nullable', 'string', 'max:20'],
             'direccion' => ['nullable', 'string', 'max:255'],
         ]);
@@ -59,7 +59,7 @@ class UsuarioController extends Controller
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:100'],
             'email' => ['required', 'email', 'max:120', Rule::unique('users', 'email')->ignore($usuario->id)],
-            'rol' => ['required', Rule::in(['ADMIN', 'EMPLEADO', 'REPARTIDOR', 'CLIENTE'])],
+            'rol' => ['required', Rule::in(['ADMIN', 'EMPLEADO'])],
             'telefono' => ['nullable', 'string', 'max:20'],
             'direccion' => ['nullable', 'string', 'max:255'],
             'password' => ['nullable', 'string', 'min:6'],

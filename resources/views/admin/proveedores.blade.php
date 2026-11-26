@@ -11,28 +11,13 @@
             Gestión de aliados comerciales, contactos y trazabilidad de compras
         </p>
     </div>
-
-<<<<<<< HEAD
-    <a
-    href="/admin/proveedores/nuevo"
-    class="bg-[#0F3D2F]
-           hover:bg-green-800
-           text-white
-           px-6
-           py-3
-           rounded-xl
-           inline-block">
-    + Nuevo Proveedor
-</a>
     
-
-=======
     <button onclick="document.getElementById('modalCrearProveedor').classList.remove('hidden')"
             class="bg-[#0F3D2F] hover:bg-emerald-900 text-white font-bold px-5 py-3 rounded-xl shadow-md transition flex items-center space-x-2 text-sm">
         <span>+</span>
         <span>Nuevo Proveedor</span>
     </button>
->>>>>>> 4e205096ca1fabbeed6f41a996aa4e7472e31430
+
 </div>
 
 <!-- FILTRO Y BÚSQUEDA -->

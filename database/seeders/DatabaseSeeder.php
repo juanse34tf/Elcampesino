@@ -39,28 +39,6 @@ class DatabaseSeeder extends Seeder
             'bloqueado' => false,
         ]);
 
-        $repartidor = User::create([
-            'name' => 'Carlos Gómez (Repartidor)',
-            'email' => 'carlos@campesino.com',
-            'password' => Hash::make('repartidor123'),
-            'rol' => 'REPARTIDOR',
-            'telefono' => '3123456789',
-            'direccion' => 'Carrera 15 # 45-67, Cali',
-            'intentos_fallidos' => 0,
-            'bloqueado' => false,
-        ]);
-
-        $cliente = User::create([
-            'name' => 'Mariana Muñoz (Cliente)',
-            'email' => 'mariana@gmail.com',
-            'password' => Hash::make('cliente123'),
-            'rol' => 'CLIENTE',
-            'telefono' => '3101112233',
-            'direccion' => 'Calle 5 # 66-100 Apto 402, Cali',
-            'intentos_fallidos' => 0,
-            'bloqueado' => false,
-        ]);
-
         // 2. CATEGORÍAS
         $catPollos = Categoria::create([
             'nombre' => 'Pollos y Aves',

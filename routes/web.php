@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\InventarioController;
 use App\Http\Controllers\Admin\MovimientoController;
 use App\Http\Controllers\Admin\ProveedorController;
 use App\Http\Controllers\Admin\UsuarioController;
+//RUTAS DE VENDEDOR 
+use App\Http\Controllers\Vendedor\AlertaController as VendedorAlertaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Vendedor\DashboardController as VendedorDashboardController;
 use Illuminate\Support\Facades\Route;
@@ -59,4 +61,12 @@ Route::middleware(['rol:ADMIN'])->prefix('admin')->name('admin.')->group(functio
 // ==========================================
 Route::middleware(['rol:ADMIN,EMPLEADO'])->prefix('vendedor')->name('vendedor.')->group(function () {
     Route::get('/dashboard', [VendedorDashboardController::class, 'index'])->name('dashboard');
+    Route::view('/movimientos', 'vendedor.movimientos')->name('movimientos');
+    Route::view('/alertas', 'vendedor.alertas')->name('alertas');
+
+    //=====================================
+    // ALERTAS VENDEDOR 
+    //=====================================
+
+    Route::get( '/alertas',[VendedorAlertaController::class, 'index'])->name('alertas');
 });

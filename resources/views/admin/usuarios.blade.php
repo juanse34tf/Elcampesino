@@ -38,8 +38,6 @@
                 <option value="">-- Todos los roles --</option>
                 <option value="ADMIN" {{ request('rol') == 'ADMIN' ? 'selected' : '' }}>👑 Administrador</option>
                 <option value="EMPLEADO" {{ request('rol') == 'EMPLEADO' ? 'selected' : '' }}>🛒 Empleado / Caja</option>
-                <option value="REPARTIDOR" {{ request('rol') == 'REPARTIDOR' ? 'selected' : '' }}>🛵 Repartidor</option>
-                <option value="CLIENTE" {{ request('rol') == 'CLIENTE' ? 'selected' : '' }}>👤 Cliente</option>
             </select>
         </div>
 
@@ -86,14 +84,6 @@
                             @elseif($usr->rol === 'EMPLEADO')
                                 <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-100 text-emerald-800">
                                     🛒 Empleado
-                                </span>
-                            @elseif($usr->rol === 'REPARTIDOR')
-                                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-blue-100 text-blue-800">
-                                    🛵 Repartidor
-                                </span>
-                            @else
-                                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 text-slate-700">
-                                    👤 Cliente
                                 </span>
                             @endif
                         </td>
@@ -177,8 +167,6 @@
                     <select name="rol" required class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-[#0F3D2F] focus:outline-none">
                         <option value="EMPLEADO">🛒 Empleado / Caja</option>
                         <option value="ADMIN">👑 Administrador</option>
-                        <option value="REPARTIDOR">🛵 Repartidor</option>
-                        <option value="CLIENTE">👤 Cliente</option>
                     </select>
                 </div>
             </div>
@@ -237,8 +225,6 @@
                     <select id="edit_usr_rol" name="rol" required class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-[#0F3D2F] focus:outline-none">
                         <option value="EMPLEADO">🛒 Empleado / Caja</option>
                         <option value="ADMIN">👑 Administrador</option>
-                        <option value="REPARTIDOR">🛵 Repartidor</option>
-                        <option value="CLIENTE">👤 Cliente</option>
                     </select>
                 </div>
             </div>
